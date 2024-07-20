@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rastreamento de Tarefas no Armazém</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rastreamento de Tarefas no Armazém</h1>
+    <form id="taskForm">
+      <label for="fornecedor">Fornecedor:</label>
+      <input type="text" id="fornecedor" required />
+      <label for="descricao">Descrição do Produto:</label>
+      <input type="text" id="descricao" required />
+      <label for="codigo">Código:</label>
+      <input type="text" id="codigo" required />
+      <label for="status">Status:</label>
+      <select id="status">
+        <option value="Recebido">Recebido</option>
+        <option value="Conferência">Conferência</option>
+        <option value="Aguardando Fiscal">Aguardando Fiscal</option>
+        <option value="Aguardando Qualidade">Aguardando Qualidade</option>
+        <option value="Aguardando Armazenagem">Aguardando Armazenagem</option>
+        <option value="Armazenado">Armazenado</option>
+      </select>
+      <button type="submit">Adicionar Tarefa</button>
+    </form>
+
+    <table id="taskTable">
+      <thead>
+        <tr>
+          <th>Fornecedor</th>
+          <th>Descrição</th>
+          <th>Código</th>
+          <th>Status</th>
+          <th>Data e Hora</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

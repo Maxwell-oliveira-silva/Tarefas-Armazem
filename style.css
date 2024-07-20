@@ -1,0 +1,116 @@
+/* Variáveis de Cores */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --border-color: #ddd;
+  --button-hover-color: #2980b9;
+  --table-header-bg: #2980b9;
+  --table-header-color: #fff;
+  --table-row-bg: #ecf0f1;
+  --table-row-hover-bg: #d5dfe8;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-color);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--table-row-bg);
+}
+
+tbody tr:hover {
+  background-color: var(--table-row-hover-bg);
+}
+
+td button {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+td button:first-child {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+td button:first-child:hover {
+  background-color: var(--primary-color);
+}
+
+td button:last-child {
+  background-color: var(--danger-color);
+  color: #fff;
+}
+
+td button:last-child:hover {
+  background-color: #c0392b;
+}
